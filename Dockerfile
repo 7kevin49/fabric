@@ -28,8 +28,10 @@ RUN python3 -m pip install --upgrade pip \
 
 
 # Clone the repository and install its dependencies
-RUN git clone https://github.com/danielmiessler/fabric.git \
-    && python3 -m pipx install ./fabric
+RUN git clone https://github.com/gilesheron/fabric.git \
+    && cd fabric \
+    && git checkout docker \
+    && python3 -m pipx install .
 
 
 # Set file permissions for the app directory
