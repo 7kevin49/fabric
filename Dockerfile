@@ -29,9 +29,7 @@ RUN python3 -m pip install --upgrade pip \
 
 # Clone the repository and install its dependencies
 RUN git clone https://github.com/gilesheron/fabric.git \
-    && cd fabric \
-    && git checkout docker \
-    && python3 -m pipx install .
+    && python3 -m pipx install ./fabric
 
 
 # Set file permissions for the app directory
@@ -41,4 +39,4 @@ RUN chmod -R 755 /home/appuser/app
 USER appuser
 
 # Set the entrypoint
-ENTRYPOINT ["/home/appuser/app/fabric/run.sh"]
+ENTRYPOINT ["/usr/bin/bash"]
