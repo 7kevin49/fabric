@@ -41,4 +41,4 @@ RUN chmod -R 755 /home/appuser/app
 USER appuser
 
 # Set the entrypoint
-ENTRYPOINT ["/home/appuser/app/run.sh"]
+ENTRYPOINT ["/home/appuser/app/fabric/run.sh"]
