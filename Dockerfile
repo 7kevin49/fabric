@@ -41,4 +41,4 @@ RUN chmod -R 755 /home/appuser/app
 USER appuser
 
 # Set the entrypoint
-ENTRYPOINT ["/usr/bin/bash"]
+ENTRYPOINT ["/home/appuser/app/run.sh"]
