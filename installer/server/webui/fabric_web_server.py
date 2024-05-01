@@ -29,7 +29,7 @@ def send_request(prompt, endpoint):
         KeyError: If the response JSON does not contain the expected "response" key.
     """
 
-    base_url = "http://0.0.0.0:13337"
+    base_url = "http://127.0.0.1:13337"
     url = f"{base_url}{endpoint}"
     headers = {
         "Content-Type": "application/json",
